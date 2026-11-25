@@ -1,10 +1,4 @@
 <!doctype html>
-<!--
-  PRIMARY_CTA
-  Both "Get early access" buttons (header and final section) carry data-primary-cta and a PRIMARY_CTA
-  comment. To change where the main call to action points, search for data-primary-cta and replace the
-  href on each. Currently: early-access email to Bryan.
--->
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -29,88 +23,74 @@
   <link rel="stylesheet" href="site.css">
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <div class="glow" aria-hidden="true"><span></span><span></span></div>
+
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="index.html" aria-label="Parity home"><img src="favicon.svg" alt="" width="34" height="34">Parity</a>
-      <!-- PRIMARY_CTA --><a class="btn sm" data-primary-cta href="mailto:zhaobrya@usc.edu?subject=Parity%20early%20access&amp;body=Hi%20Bryan%2C%0A%0AI%27m%20interested%20in%20Parity%20for%20my%20lab%20or%20core.%0A%0ALab%20or%20university%3A%0AWhat%20I%27d%20like%20help%20with%3A%0A">Get early access</a>
+      <a class="brand" href="/" aria-label="Parity home"><img src="favicon.svg" alt="" width="34" height="34">Parity</a>
+      <button class="btn sm" type="button" data-open-form>Get early access</button>
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero">
-      <div class="wrap">
-        <h1><span class="a">You run the science.</span><span class="b">Parity runs the lab.</span></h1>
-        <p class="lead">Parity matches your lab's machine bookings with real machine usage, from power sensors and computer logins, and writes the bill to the right grant.</p>
-        <p class="tagline">Revolutionizing labs through automation.</p>
+  <main class="hero">
+    <div class="wrap">
+      <h1><span class="a">You run the science.</span><span class="b">Parity runs the lab.</span></h1>
+      <p class="lead">Parity matches your lab's machine bookings with real machine usage, from power sensors and computer logins, and writes the bill to the right grant.</p>
+      <div class="actions">
+        <button class="btn" type="button" data-open-form>Get early access</button>
       </div>
-    </section>
-
-    <section class="band" aria-labelledby="steps-title">
-      <div class="wrap steps-layout">
-        <div>
-          <p class="eyebrow">How it works</p>
-          <h2 id="steps-title">Three steps, once a month.</h2>
-          <p class="lead">Keep the scheduler you already use. Parity reads what it already holds.</p>
-        </div>
-        <ol class="steps">
-          <li><span class="n" aria-hidden="true">1</span><div><h3>Connect bookings, logins and power</h3><p>Point Parity at your bookings, your instrument computers' logins and your power readings.</p></div></li>
-          <li><span class="n" aria-hidden="true">2</span><div><h3>Parity matches, prices and flags</h3><p>Each booking is paired with what the machine actually did, priced with your rules and charged to the right grant. Anything odd is flagged.</p></div></li>
-          <li><span class="n" aria-hidden="true">3</span><div><h3>Approve and export to your scheduler</h3><p>You review the flagged sessions. Nothing is sent until you approve it.</p></div></li>
-        </ol>
-      </div>
-    </section>
-
-    <section aria-labelledby="gap-title">
-      <div class="wrap compare">
-        <div>
-          <p class="eyebrow">Booked vs used</p>
-          <h2 id="gap-title">A booking is half the story.</h2>
-          <p class="lead">John booked the confocal for two hours. The machine ran for three and a half. The calendar can't see that. The power sensor can.</p>
-          <p class="lead">Parity bills what happened, and holds the extra 1.5 hours for you.</p>
-        </div>
-        <figure class="chart" role="img" aria-label="Timeline from 8 AM to 2 PM. John's booking runs 9 to 11. The machine was on from 9 to 12:30. The 1.5 hours after the booking ends are flagged in red.">
-          <div class="chart-title"><strong>Confocal microscope, Fri Oct 2</strong><span class="muted">John, self-service</span></div>
-          <div class="axis" aria-hidden="true"><span style="left:0">8 AM</span><span style="left:16.6667%">9</span><span style="left:33.3333%">10</span><span style="left:50%">11</span><span style="left:66.6667%">12</span><span style="left:83.3333%">1</span><span style="left:100%">2 PM</span></div>
-          <div class="row-label" aria-hidden="true">Booked <span>9:00 to 11:00</span></div>
-          <div class="track" aria-hidden="true"><div class="seg booked"></div></div>
-          <div class="row-label" aria-hidden="true">Machine on <span>9:00 to 12:30</span></div>
-          <div class="track" aria-hidden="true"><div class="seg used-ok"></div><div class="seg used-gap"></div></div>
-          <div class="gap-note" aria-hidden="true"><b>1.5 h over the booking</b><span>Flagged before it is billed.</span></div>
-          <div class="legend" aria-hidden="true"><span><i class="l-b"></i>Booked</span><span><i class="l-u"></i>Used, within booking</span><span><i class="l-g"></i>Used, past booking</span></div>
-        </figure>
-      </div>
-    </section>
-
-    <section class="privacy" id="privacy" aria-labelledby="privacy-title">
-      <div class="wrap">
-        <h2 id="privacy-title">Everything stays on your computer.</h2>
-        <p class="lead">Your bookings, logins and billing never leave the machine Parity runs on.</p>
-      </div>
-    </section>
-
-    <section class="final" aria-labelledby="final-title">
-      <div class="wrap">
-        <div class="final-card">
-          <div>
-            <h2 id="final-title">You run the science.<br>Parity runs the lab.</h2>
-            <p>Start with one month of your lab's records.</p>
-          </div>
-          <!-- PRIMARY_CTA --><a class="btn on-mint" data-primary-cta href="mailto:zhaobrya@usc.edu?subject=Parity%20early%20access&amp;body=Hi%20Bryan%2C%0A%0AI%27m%20interested%20in%20Parity%20for%20my%20lab%20or%20core.%0A%0ALab%20or%20university%3A%0AWhat%20I%27d%20like%20help%20with%3A%0A">Get early access</a>
-        </div>
-      </div>
-    </section>
+      <p class="tagline">Revolutionizing labs through automation.</p>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap foot">
-      <div>
-        <a class="brand" href="index.html" aria-label="Parity home"><img src="favicon.svg" alt="" width="34" height="34">Parity</a>
-        <p class="tag-line">Revolutionizing labs through automation.</p>
+  <dialog id="access" aria-labelledby="access-title">
+    <form id="access-form" novalidate>
+      <button class="x" type="button" data-close aria-label="Close">&times;</button>
+      <div class="step-form">
+        <h2 id="access-title">Get early access</h2>
+        <p class="sub">Tell us about your lab. We'll reach out when your spot opens.</p>
+        <label>Name<input name="entry.397007592" autocomplete="name" required></label>
+        <label>Email<input name="entry.735668902" type="email" autocomplete="email" required></label>
+        <label>Lab or institution<input name="entry.2094739918" autocomplete="organization" required></label>
+        <div class="two">
+          <label>Your role <span class="opt">optional</span><input name="entry.323073877" placeholder="e.g. Facility manager"></label>
+          <label>Machines <span class="opt">optional</span><input name="entry.643782958" inputmode="numeric" placeholder="e.g. 5"></label>
+        </div>
+        <label>What would you like Parity to help with? <span class="opt">optional</span><textarea name="entry.1132082497" rows="3"></textarea></label>
+        <p class="err" role="alert" hidden></p>
+        <button class="btn full" type="submit">Request access</button>
       </div>
-      <a class="mail" href="mailto:zhaobrya@usc.edu">zhaobrya@usc.edu</a>
-      <p class="copy-line">&copy; 2026 Parity</p>
-    </div>
-  </footer>
+      <div class="step-done" hidden>
+        <div class="check" aria-hidden="true">&#10003;</div>
+        <h2>You're on the list.</h2>
+        <p class="sub">Thanks. We'll be in touch soon.</p>
+        <button class="btn full ghost" type="button" data-close>Close</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script>
+  (function(){
+    var FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSesOC1G726JBOqrGGxOpIjIYng6pdG-ZVBGO3P_UqGlECQLsw/formResponse";
+    var dlg = document.getElementById("access"), form = document.getElementById("access-form");
+    var err = form.querySelector(".err"), done = form.querySelector(".step-done"), fill = form.querySelector(".step-form");
+    function open(){ if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open",""); var f=form.querySelector("input"); if (f) f.focus(); }
+    function close(){ if (dlg.close) dlg.close(); else dlg.removeAttribute("open"); }
+    document.querySelectorAll("[data-open-form]").forEach(function(b){ b.addEventListener("click", open); });
+    form.querySelectorAll("[data-close]").forEach(function(b){ b.addEventListener("click", close); });
+    dlg.addEventListener("click", function(e){ if (e.target === dlg) close(); });
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      var bad = Array.prototype.filter.call(form.querySelectorAll("[required]"), function(i){ return !i.checkValidity(); });
+      if (bad.length){ err.textContent = "Please add your name, a valid email and your lab."; err.hidden = false; bad[0].focus(); return; }
+      err.hidden = true;
+      var btn = form.querySelector("[type=submit]"); btn.disabled = true; btn.textContent = "Sending…";
+      fetch(FORM_URL, { method: "POST", mode: "no-cors", body: new FormData(form) })
+        .then(function(){ fill.hidden = true; done.hidden = false; })
+        .catch(function(){ err.textContent = "Couldn't send. Please try again."; err.hidden = false; })
+        .then(function(){ btn.disabled = false; btn.textContent = "Request access"; });
+    });
+  })();
+  </script>
 </body>
 </html>
